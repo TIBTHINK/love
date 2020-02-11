@@ -11,3 +11,5 @@ jobs:
     - uses: actions/checkout@v2
     - name: comp
       run: ./comp.sh
+    - name: run
+      run: ./love
