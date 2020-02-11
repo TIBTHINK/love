@@ -1,1 +1,1 @@
-g++ -o love love.cpp
+g++ -o love.out love.cpp
