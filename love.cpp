@@ -1,17 +1,24 @@
 #include <iostream>
-#include <vector>
-#include <string>
-#include <fstream>
-#include <chrono>
-#include <thread>
+#include <unistd.h>
 
 using namespace std;
 
+
 int main(){
 
-    cout << "You are loved." << endl;
-    cout << "You might not feel like you are but there is some one out there for you." << endl;
-    std::chrono::duration<int, std::milli> timespan(1000);
-    std::this_thread::sleep_for(timespan);
+    
+    cout << "hey there friend" << endl;
+    usleep(10);
+
     return 0;
 }
+
+    // std::
+
+    // cout << "hey there friend" << endl;
+    // std::this_thread::sleep_for(std::chrono::milliseconds(4000));
+    // cout << "i know youve been having some troubles lately" << endl;
+    // std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+    // cout << "be the person i know you can be" << endl;
+    // std::this_thread::sleep_for(std::chrono::milliseconds(5000));
+    // cout << "dont leave anything up to chance" << endl;
