@@ -114,6 +114,7 @@ int main()
     cout << "" << endl;
     sleepcp(4000);
     cout << "i belive in you pal" << endl;
+    cout << "" << endl;
     sleepcp(3000);
     cout << "we ALL belive in you" << endl;
     cout << "" << endl;
