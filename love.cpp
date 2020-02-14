@@ -119,11 +119,9 @@ int main()
     cout << "ur a winner kiddo." << endl;
     cout << "dont you ever forget" << endl;
     cout << "" << endl;
-
+    sleepcp(6000);
     lizard();
-
-
-    // sleepcp(25000);
+    sleepcp(19000);
 
     return 0;
 
