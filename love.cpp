@@ -1,12 +1,29 @@
+// Version 2 is now out baby
+// enjoy your love
+
+
 #include <iostream>
+#include <string>
+#include <thread>
+#include <chrono>
 #include <time.h>
 #include <stdio.h>
+#define MULTI_LINE(a) #a
 
-using namespace std;
+
+using std::cout;
+using std::flush;
+using std::string;
+using std::this_thread::sleep_for;
+using std::chrono::milliseconds;
+
+// Forward declare the slow_print function
+void slow_print(const string&, unsigned int);
 void sleepcp(int milliseconds);
 #define clear() printf("\033[H\033[J")
 
-void sleepcp(int milliseconds) // Cross-platform sleep function
+// Cross-platform sleep function
+void sleepcp(int milliseconds) 
 {
     clock_t time_end;
     time_end = clock() + milliseconds * CLOCKS_PER_SEC/1000;
@@ -15,119 +32,52 @@ void sleepcp(int milliseconds) // Cross-platform sleep function
     }
 }
 
+// lizard bro
 void lizard()
 {
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::://+++ooooooooooooooooo++++////////::::::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::/+ooooooooooooooooooooooooooooooooooooo/::::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::/+ooooooooooooooooooooooooooooooooooooooooo/:::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::/yydNNdooooooooooooossssooooooooooooooooo+////+oo/::::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::sNMMMMNdooooooooooosmMMMMmsooooooooooooooo+////+ooo+:::::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::/+osyyyyssoooooooooooohMMMMMMhoooooooooooooooo++++oooooo/:::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::/++ooooooooooooooooooooooohmdhhysooooooooooooooooooooooooooo:::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::/+oooooooooooooooooooooooooooooooooooooooooo++/++ooooooooooooo+::::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::+ooooooooooooooooooooooooooooooooooooooooooo+/////+o+++ooooooooo+:::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::+ooooooooooooooooooooooooooooooooooooooooooooo+///+o/////+oooooooo:::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::+oooooooooooooooooooooooooooooooooooooooooooooooooooo//////oooooooo+::::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::oooooooooooooooooooooosoooooooooooooooooooo////+ooooo+///+oooooooooo/:::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::/+++oooooooooooooooooooooooooooooooooooooo//////ooooooooooooooooooooo:::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::///++oooooooooooooooooooooooooooooooo+/////ooooooooooooooooooooo+::::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::://////+++++++++++++++++++ooooooo+++ooooooooooooooooooooooo/:::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::+oooooooo++ooooooooo+++ooooooooo+:::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::/oooooo/////+ooooo+////+ooooooooo:::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::ooooo+//////oooooo////+ooooooooo:::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::/ooooo+///+oooooooo++ooooooooooo:::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooooooooooooooooooooooooo+::::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooooooooooooooooooooooooo+:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::+ooooooooo+////+ooooooooooooooo:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::oooooooo+//////ooo+////+oooooo:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooo+////+ooo//////+ooooo:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::oooooooooooooooo+///////ooooo:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::::ooooooooooooooooo//////+ooooo:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::/ooo++//+oooooooooo++++ooooooo:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::+oo+//////ooooooooooooooooooo/:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::ooo///////+oooooooooooooooooo/:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::::ooo///////+oooooooooooooooooo/:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::/ooo///////ooooooooooooooooooo+:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "::::::::::::::::::::::::::::::::::::::::::::::::::::ooooo/////+oooooooooooooooooooo:::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << ":::::::::::::::::::::::::::::::::::::::::::::::::::+ooooooo+ooooooooooooooooooooooo/::::::::::::::::" << endl;
-    sleepcp(100);
-    cout << "//////////////////////////////////////////////////+osssssssssssssssssssssssssssssss/////////////////" << endl;
-    sleepcp(100);
-    cout << "+++++++++++++++++++++++++++++++++++++++++++++++++oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyo++++++++++++++++" << endl;
-
+    string lizard = "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::://+++ooooooooooooooooo++++////////::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::/+ooooooooooooooooooooooooooooooooooooo/::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::/+ooooooooooooooooooooooooooooooooooooooooo/:::::::::::::::::::::::::::::\n::::::::::::::::::::::/yydNNdooooooooooooossssooooooooooooooooo+////+oo/::::::::::::::::::::::::::::\n:::::::::::::::::::::sNMMMMNdooooooooooosmMMMMmsooooooooooooooo+////+ooo+:::::::::::::::::::::::::::\n::::::::::::::::::/+osyyyyssoooooooooooohMMMMMMhoooooooooooooooo++++oooooo/:::::::::::::::::::::::::\n:::::::::::::::/++ooooooooooooooooooooooohmdhhysooooooooooooooooooooooooooo:::::::::::::::::::::::::\n:::::::::::::/+oooooooooooooooooooooooooooooooooooooooooo++/++ooooooooooooo+::::::::::::::::::::::::\n::::::::::::+ooooooooooooooooooooooooooooooooooooooooooo+/////+o+++ooooooooo+:::::::::::::::::::::::\n:::::::::::+ooooooooooooooooooooooooooooooooooooooooooooo+///+o/////+oooooooo:::::::::::::::::::::::\n::::::::::+oooooooooooooooooooooooooooooooooooooooooooooooooooo//////oooooooo+::::::::::::::::::::::\n::::::::::oooooooooooooooooooooosoooooooooooooooooooo////+ooooo+///+oooooooooo/:::::::::::::::::::::\n::::::::::/+++oooooooooooooooooooooooooooooooooooooo//////ooooooooooooooooooooo:::::::::::::::::::::\n:::::::::::::::///++oooooooooooooooooooooooooooooooo+/////ooooooooooooooooooooo+::::::::::::::::::::\n:::::::::::::::::::::://////+++++++++++++++++++ooooooo+++ooooooooooooooooooooooo/:::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::+oooooooo++ooooooooo+++ooooooooo+:::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::/oooooo/////+ooooo+////+ooooooooo:::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::ooooo+//////oooooo////+ooooooooo:::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::/ooooo+///+oooooooo++ooooooooooo:::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooooooooooooooooooooooooo+::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooooooooooooooooooooooooo+:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::+ooooooooo+////+ooooooooooooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::oooooooo+//////ooo+////+oooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooo+////+ooo//////+ooooo:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::oooooooooooooooo+///////ooooo:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::ooooooooooooooooo//////+ooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::/ooo++//+oooooooooo++++ooooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::+oo+//////ooooooooooooooooooo/:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::ooo///////+oooooooooooooooooo/:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::ooo///////+oooooooooooooooooo/:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::/ooo///////ooooooooooooooooooo+:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::ooooo/////+oooooooooooooooooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::+ooooooo+ooooooooooooooooooooooo/::::::::::::::::\n//////////////////////////////////////////////////+osssssssssssssssssssssssssssssss/////////////////\n+++++++++++++++++++++++++++++++++++++++++++++++++oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyo++++++++++++++++\n";
+    slow_print(lizard, 5);
 }
 
+// Main function
 int main()
 {
     clear();
-    sleepcp(14200);
-    cout << "hey there friend" << endl;
-    cout << "" << endl;
+    sleepcp(1000);
+    string one = "hey there friend\n\n";
+    slow_print(one, 50);
     sleepcp(5000);
-    cout << "i know you've been having some troubles lately" << endl;
-    cout << "" << endl;
+    string two = "i know you've been having some troubles lately\n\n";
+    slow_print(two, 50);
     sleepcp(4140);
-    cout << "be the person i know you can be" << endl;
-    cout << "" << endl;
+    string three = "be the person i know you can be\n\n";
+    slow_print(three, 50);
     sleepcp(4800);
-    cout << "dont leave anything up to chance" << endl;
-    cout << "" << endl;
+    string four = "dont leave anything up to chance\n\n";
+    slow_print(four, 50);
     sleepcp(9000);
-    cout << "i belive in you pal" << endl;
-    cout << "" << endl;
+    string five = "i belive in you pal\n\n";
+    slow_print(five, 50);
     sleepcp(4730);
-    cout << "we ALL belive in you" << endl;
-    cout << "" << endl;
+    string six = "we ALL belive in you\n\n";
+    slow_print(six, 50);
     sleepcp(5070);
-    cout << "ur a winner kiddo." << endl;
-    cout << "dont you ever forget" << endl;
-    cout << "" << endl;
+    string seven = "ur a winner kiddo.\n";
+    slow_print(seven, 50);
+    string eight = "dont you ever forget\n\n";
+    slow_print(eight, 50);
     sleepcp(6000);
     lizard();
     sleepcp(20000);
     return 0;
-};
+}
 
+// Implement the slow_print function
+/**
+ * Function to print each character in a string with a delay (a "typewriter" effect)
+ * @param message         The string to print
+ * @param millis_per_char Milliseconds to take to print each character
+ */
 void slow_print(const string& message, unsigned int millis_per_char)
 {
     // Range loops are "for each" constructs; here: for each character in the string
@@ -139,3 +89,4 @@ void slow_print(const string& message, unsigned int millis_per_char)
         // Ask the thread to sleep for at least n millis.
         sleep_for(milliseconds(millis_per_char));
     }
+}
