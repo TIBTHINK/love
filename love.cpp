@@ -100,33 +100,42 @@ void lizard()
 int main()
 {
     clear();
-    sleepcp(14000);
+    sleepcp(14200);
     cout << "hey there friend" << endl;
     cout << "" << endl;
-    sleepcp(4000);
+    sleepcp(5000);
     cout << "i know you've been having some troubles lately" << endl;
     cout << "" << endl;
-    sleepcp(5000);
+    sleepcp(4140);
     cout << "be the person i know you can be" << endl;
     cout << "" << endl;
-    sleepcp(5000);
+    sleepcp(4800);
     cout << "dont leave anything up to chance" << endl;
     cout << "" << endl;
-    sleepcp(4000);
+    sleepcp(9000);
     cout << "i belive in you pal" << endl;
     cout << "" << endl;
-    sleepcp(3000);
+    sleepcp(4730);
     cout << "we ALL belive in you" << endl;
     cout << "" << endl;
-    sleepcp(5000);
+    sleepcp(5070);
     cout << "ur a winner kiddo." << endl;
     cout << "dont you ever forget" << endl;
     cout << "" << endl;
     sleepcp(6000);
     lizard();
-    sleepcp(19000);
-
+    sleepcp(20000);
     return 0;
+};
 
+void slow_print(const string& message, unsigned int millis_per_char)
+{
+    // Range loops are "for each" constructs; here: for each character in the string
+    for (const char c: message)
+    {
+        // flush is used to make sure the buffer is emptied to the terminal immediately
+        cout << c << flush;
 
-}
+        // Ask the thread to sleep for at least n millis.
+        sleep_for(milliseconds(millis_per_char));
+    }
