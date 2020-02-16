@@ -13,6 +13,14 @@ if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
     BIN_DIR="$PREFIX/bin/"
     BASH_PATH="$PREFIX/bin/bash"
     TERMUX=true
+    
+    apt install -y g++
+    apt install g++
+    ./comp.sh
+    mv love.bin "$INSTALL_DIR"
+    sleep 3
+    echo "ok now go away and run the love command :)"
+
 else
   if [[ $EUID -ne 0 ]]; then
    echo "This script must be run as root" 
@@ -24,5 +32,9 @@ else
     TERMUX=false
 
     apt install -y g++
+    ./comp.sh
+    mv love /usr/bin/love
+    sleep 3
+    echo "ok now go away and run the love command :)"
 
 fi
