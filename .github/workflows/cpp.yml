@@ -12,4 +12,4 @@ jobs:
     - name: comp
       run: ./comp.sh
     - name: run
-      run: ./love.bin
+      run: ./love
