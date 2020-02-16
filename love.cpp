@@ -1,16 +1,18 @@
 // Version 2 is now out baby
 // enjoy your love
 
-
+// add some librays my guy
 #include <iostream>
 #include <string>
 #include <thread>
 #include <chrono>
 #include <time.h>
 #include <stdio.h>
+
+// define some stuff
 #define MULTI_LINE(a) #a
 
-
+// std time
 using std::cout;
 using std::flush;
 using std::string;
@@ -39,7 +41,7 @@ void lizard()
     slow_print(lizard, 5);
 }
 
-// Main function
+// the magic dude
 int main()
 {
     clear();
