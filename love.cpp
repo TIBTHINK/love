@@ -69,6 +69,7 @@ int main()
     sleepcp(6000);
     lizard();
     sleepcp(20000);
+    clear();
     return 0;
 }
 
