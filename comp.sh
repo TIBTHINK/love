@@ -1,1 +1,1 @@
-g++ -o love.bin love.cpp
+g++ -o love love.cpp
