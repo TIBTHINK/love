@@ -1,6 +1,5 @@
 
 if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
-    INSTALL_DIR="$PREFIX/usr/share/doc/fsociety"
     BIN_DIR="$PREFIX/bin/"
     BASH_PATH="$PREFIX/bin/bash"
     TERMUX=true
@@ -12,8 +11,6 @@ if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
    echo "ok now go away and run the love command :)"
 
 else
-    INSTALL_DIR="$HOME/.fsociety"
-    BIN_DIR="/usr/local/bin/"
     BASH_PATH="/bin/bash"
     TERMUX=false
 
