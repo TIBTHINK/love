@@ -6,7 +6,7 @@ if [ "$PREFIX" = "/data/data/com.termux/files/usr" ]; then
 
    apt install g++
    ./comp.sh
-   mv love BIN_DIR
+   mv love $BIN_DIR
    sleep 3
    echo "ok now go away and run the love command :)"
 
