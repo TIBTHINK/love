@@ -1,7 +1,6 @@
-#include "argparse.h"
-
 #include <iostream>
 #include <iterator>
+#include "argparse.h"
 
 using namespace argparse;
 

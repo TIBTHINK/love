@@ -6,7 +6,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <iterator>
-#include "argparse.h"
+
 
 // define some stuff
 #define MULTI_LINE(a) #a
@@ -18,7 +18,7 @@ using std::flush;
 using std::string;
 using std::this_thread::sleep_for;
 using std::chrono::milliseconds;
-using namespace argparse;
+
 
 // Forward declare the slow_print function
 void slow_print(const string&, unsigned int);
@@ -43,24 +43,8 @@ void lizard()
 }
 
 // the magic dude
-int main(int argc, const char* argv[])
+int main()
 {
-    ArgumentParser parser("Argument parser example");
-    parser.add_argument()
-        .names({"-v", "-version"})
-        .description("prints version number")
-        .required(true);
-    parser.enable_help();
-    auto err = parser.parse(argc, argv);
-    if (err) {
-        std::cout << err << std::endl;
-        return -1;
-    }
-    if (parser.exists("help")) {
-        parser.print_help();
-        return 0;
-    }
-
 
     clear();
     sleepcp(1000);
