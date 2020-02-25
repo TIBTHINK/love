@@ -1,4 +1,5 @@
 // add some librays my guy
+#include "CLI11.hpp"
 #include <iostream>
 #include <string>
 #include <thread>
@@ -18,6 +19,7 @@ using std::flush;
 using std::string;
 using std::this_thread::sleep_for;
 using std::chrono::milliseconds;
+using namespace std;
 
 
 // Forward declare the slow_print function
@@ -43,8 +45,26 @@ void lizard()
 }
 
 // the magic dude
-int main()
+int main(int argc, char** argv)
 {
+
+
+
+    CLI::App app{""};
+
+    string filename = "default";
+    CLI::Option* v = app.add_flag("-v, --version ", "gives the version of the program ");
+    CLI::Option* version = app.add_flag("");
+
+    CLI11_PARSE(app, argc, argv);
+
+    if(v)
+      cout << "V3.2" << endl;
+    return 0;
+
+    if(version)
+      cout << "V3.2" << endl;
+    return 0;
 
     clear();
     sleepcp(1000);
