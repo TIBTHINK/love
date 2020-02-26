@@ -1,5 +1,6 @@
 # love
 
+[![Run on Repl.it](https://repl.it/badge/github/TIBTHINK/love)](https://repl.it/github/TIBTHINK/love)
 
 ## Disclaimer
 
