@@ -44,6 +44,39 @@ void lizard()
     slow_print(lizard, 5);
 }
 
+int text()
+{
+    clear();
+    sleepcp(1000);
+    string one = "hey there friend\n\n";
+    slow_print(one, 50);
+    sleepcp(5000);
+    string two = "i know you've been having some troubles lately\n\n";
+    slow_print(two, 50);
+    sleepcp(4140);
+    string three = "be the person i know you can be\n\n";
+    slow_print(three, 50);
+    sleepcp(4800);
+    string four = "dont leave anything up to chance\n\n";
+    slow_print(four, 50);
+    sleepcp(9000);
+    string five = "i belive in you pal\n\n";
+    slow_print(five, 50);
+    sleepcp(4730);
+    string six = "we ALL belive in you\n\n";
+    slow_print(six, 50);
+    sleepcp(5070);
+    string seven = "ur a winner kiddo.\n";
+    slow_print(seven, 50);
+    string eight = "dont you ever forget\n\n";
+    slow_print(eight, 50);
+    sleepcp(6000);
+    lizard();
+    sleepcp(20000);
+    clear();
+    return 0;
+}
+
 // the magic dude
 int main(int argc, char** argv)
 {
@@ -80,38 +113,7 @@ int main(int argc, char** argv)
 
 }
 
-int text()
-{
-    clear();
-    sleepcp(1000);
-    string one = "hey there friend\n\n";
-    slow_print(one, 50);
-    sleepcp(5000);
-    string two = "i know you've been having some troubles lately\n\n";
-    slow_print(two, 50);
-    sleepcp(4140);
-    string three = "be the person i know you can be\n\n";
-    slow_print(three, 50);
-    sleepcp(4800);
-    string four = "dont leave anything up to chance\n\n";
-    slow_print(four, 50);
-    sleepcp(9000);
-    string five = "i belive in you pal\n\n";
-    slow_print(five, 50);
-    sleepcp(4730);
-    string six = "we ALL belive in you\n\n";
-    slow_print(six, 50);
-    sleepcp(5070);
-    string seven = "ur a winner kiddo.\n";
-    slow_print(seven, 50);
-    string eight = "dont you ever forget\n\n";
-    slow_print(eight, 50);
-    sleepcp(6000);
-    lizard();
-    sleepcp(20000);
-    clear();
-    return 0;
-}
+
 
 // Implement the slow_print function
 /**
