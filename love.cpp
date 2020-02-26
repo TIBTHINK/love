@@ -55,6 +55,8 @@ int main(int argc, char** argv)
     string filename = "default";
     CLI::Option* v = app.add_flag("-v, --version ", "gives the version of the program ");
     CLI::Option* version = app.add_flag("");
+    CLI::Option* r = app.add_flag("-r --run ", "runs the program");
+    CLI::Option* run = app.add_flag("");
 
     CLI11_PARSE(app, argc, argv);
 
@@ -65,8 +67,21 @@ int main(int argc, char** argv)
     if(version)
       cout << "V3.2" << endl;
     return 0;
+
+    if(r)
+      text();
+    return 0;
+
+    if(run)
+      text();
+    return 0;
 	
 
+
+}
+
+int text()
+{
     clear();
     sleepcp(1000);
     string one = "hey there friend\n\n";
