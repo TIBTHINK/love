@@ -91,6 +91,14 @@ int main(int argc, char** argv)
 
   CLI11_PARSE(app, argc, argv);
 
+  if(r)
+    text();
+  return 0;
+
+  if(run)
+    text();
+  return 0;
+
   if(v)
     cout << "V3.2" << endl;
   return 0;
@@ -99,13 +107,7 @@ int main(int argc, char** argv)
     cout << "V3.2" << endl;
   return 0;
 
-  if(r)
-    text();
-  return 0;
 
-  if(run)
-    text();
-  return 0;
 	
 }
 
