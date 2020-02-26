@@ -81,33 +81,31 @@ int text()
 int main(int argc, char** argv)
 {
 
+  CLI::App app{""};
 
+  string filename = "default";
+  CLI::Option* v = app.add_flag("-v, --version ", "gives the version of the program ");
+  CLI::Option* version = app.add_flag("");
+  CLI::Option* r = app.add_flag("-r, --run ", "runs the program");
+  CLI::Option* run = app.add_flag("");
 
-    CLI::App app{""};
+  CLI11_PARSE(app, argc, argv);
 
-    string filename = "default";
-    CLI::Option* v = app.add_flag("-v, --version ", "gives the version of the program ");
-    CLI::Option* version = app.add_flag("");
-    CLI::Option* r = app.add_flag("-r, --run ", "runs the program");
-    CLI::Option* run = app.add_flag("");
+  if(v)
+    cout << "V3.2" << endl;
+  return 0;
 
-    CLI11_PARSE(app, argc, argv);
+  if(version)
+    cout << "V3.2" << endl;
+  return 0;
 
-    if(v)
-      cout << "V3.2" << endl;
-    return 0;
+  if(r)
+    text();
+  return 0;
 
-    if(version)
-      cout << "V3.2" << endl;
-    return 0;
-
-    if(r)
-      text();
-    return 0;
-
-    if(run)
-      text();
-    return 0;
+  if(run)
+    text();
+  return 0;
 	
 }
 
