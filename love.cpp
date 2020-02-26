@@ -65,7 +65,9 @@ int main(int argc, char** argv)
     if(version)
       cout << "V3.2" << endl;
     return 0;
-
+    
+   else()
+	return 0;
     clear();
     sleepcp(1000);
     string one = "hey there friend\n\n";
