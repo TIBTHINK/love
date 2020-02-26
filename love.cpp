@@ -43,7 +43,7 @@ void lizard()
     string lizard = "::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::::::::://+++ooooooooooooooooo++++////////::::::::::::::::::::::::::::::::\n::::::::::::::::::::::::::::::/+ooooooooooooooooooooooooooooooooooooo/::::::::::::::::::::::::::::::\n:::::::::::::::::::::::::::/+ooooooooooooooooooooooooooooooooooooooooo/:::::::::::::::::::::::::::::\n::::::::::::::::::::::/yydNNdooooooooooooossssooooooooooooooooo+////+oo/::::::::::::::::::::::::::::\n:::::::::::::::::::::sNMMMMNdooooooooooosmMMMMmsooooooooooooooo+////+ooo+:::::::::::::::::::::::::::\n::::::::::::::::::/+osyyyyssoooooooooooohMMMMMMhoooooooooooooooo++++oooooo/:::::::::::::::::::::::::\n:::::::::::::::/++ooooooooooooooooooooooohmdhhysooooooooooooooooooooooooooo:::::::::::::::::::::::::\n:::::::::::::/+oooooooooooooooooooooooooooooooooooooooooo++/++ooooooooooooo+::::::::::::::::::::::::\n::::::::::::+ooooooooooooooooooooooooooooooooooooooooooo+/////+o+++ooooooooo+:::::::::::::::::::::::\n:::::::::::+ooooooooooooooooooooooooooooooooooooooooooooo+///+o/////+oooooooo:::::::::::::::::::::::\n::::::::::+oooooooooooooooooooooooooooooooooooooooooooooooooooo//////oooooooo+::::::::::::::::::::::\n::::::::::oooooooooooooooooooooosoooooooooooooooooooo////+ooooo+///+oooooooooo/:::::::::::::::::::::\n::::::::::/+++oooooooooooooooooooooooooooooooooooooo//////ooooooooooooooooooooo:::::::::::::::::::::\n:::::::::::::::///++oooooooooooooooooooooooooooooooo+/////ooooooooooooooooooooo+::::::::::::::::::::\n:::::::::::::::::::::://////+++++++++++++++++++ooooooo+++ooooooooooooooooooooooo/:::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::+oooooooo++ooooooooo+++ooooooooo+:::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::/oooooo/////+ooooo+////+ooooooooo:::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::ooooo+//////oooooo////+ooooooooo:::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::/ooooo+///+oooooooo++ooooooooooo:::::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooooooooooooooooooooooooo+::::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooooooooooooooooooooooooo+:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::+ooooooooo+////+ooooooooooooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::oooooooo+//////ooo+////+oooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::+oooooooo+////+ooo//////+ooooo:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::oooooooooooooooo+///////ooooo:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::::ooooooooooooooooo//////+ooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::/ooo++//+oooooooooo++++ooooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::+oo+//////ooooooooooooooooooo/:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::ooo///////+oooooooooooooooooo/:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::::ooo///////+oooooooooooooooooo/:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::/ooo///////ooooooooooooooooooo+:::::::::::::::::\n::::::::::::::::::::::::::::::::::::::::::::::::::::ooooo/////+oooooooooooooooooooo:::::::::::::::::\n:::::::::::::::::::::::::::::::::::::::::::::::::::+ooooooo+ooooooooooooooooooooooo/::::::::::::::::\n//////////////////////////////////////////////////+osssssssssssssssssssssssssssssss/////////////////\n+++++++++++++++++++++++++++++++++++++++++++++++++oyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyo++++++++++++++++\n";
     slow_print(lizard, 5);
 }
-
+//text thing
 int text()
 {
     clear();
@@ -88,7 +88,7 @@ int main(int argc, char** argv)
     string filename = "default";
     CLI::Option* v = app.add_flag("-v, --version ", "gives the version of the program ");
     CLI::Option* version = app.add_flag("");
-    CLI::Option* r = app.add_flag("-r --run ", "runs the program");
+    CLI::Option* r = app.add_flag("-r, --run ", "runs the program");
     CLI::Option* run = app.add_flag("");
 
     CLI11_PARSE(app, argc, argv);
@@ -109,8 +109,6 @@ int main(int argc, char** argv)
       text();
     return 0;
 	
-
-
 }
 
 
