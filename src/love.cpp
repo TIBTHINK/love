@@ -99,7 +99,7 @@ int main(int argc, char **argv) {
 	
 	/// [usage]
 	if(flag_bool)
-		cout << "V2.4" << endl;
+		cout << "V2.3" << endl;
   else(void)
     text();
 	/// [usage]
