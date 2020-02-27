@@ -10,8 +10,8 @@ this was writen in linux and only tested in linux \
 
 ```
 git clone https://github.com/TIBTHINK/love.git
-cd love
-sudo bash install.sh
+cd love/src
+make && sudo make install
 ```
 
 # Basicly why I made this

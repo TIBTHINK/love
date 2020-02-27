@@ -1,2 +1,5 @@
-g++ -o love love.cpp
-./love -r
+# for debuging 
+
+
+g++ -o love src/love.cpp
+./love
