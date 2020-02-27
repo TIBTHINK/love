@@ -11,7 +11,7 @@ this was writen in linux and only tested in linux \
 ```
 git clone https://github.com/TIBTHINK/love.git
 cd love/src
-make && sudo make install
+sudo make install
 ```
 
 # Basicly why I made this
