@@ -13,7 +13,7 @@
 #	GNU make
 # 
 PREFIX = /usr/local
-MANDIR = $(shell test -d /usr/share/man/man7)
+MANDIR = $(shell test -d /usr/share/man/man7/)
 LIBS   = -lc 
 CXXFLAGS = -std=c++11
 
