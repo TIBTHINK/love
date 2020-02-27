@@ -27,11 +27,11 @@ love.7.gz:
 
 install: love love.7.gz
 	install -m 0755 -s love $(PREFIX)/bin
-	install -m 0644 doc/love.7.gz $(MANDIR)/man1
+	install -m 0644 doc/love.7.gz $(MANDIR)/
 
 uninstall:
 	-@rm $(PREFIX)/bin/love
-	-@rm $(MANDIR)/usr/share/man/man7love.7.gz
+	-@rm $(MANDIR)/usr/share/man/man7/love.7.gz
 
 clean:
-	-@rm *.o love love.7*
+	-@rm *.o love doc/love.7*
