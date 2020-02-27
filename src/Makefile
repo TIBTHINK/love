@@ -13,7 +13,7 @@
 #	GNU make
 # 
 PREFIX = /usr/local
-MANDIR = $(shell test -d /usr/share/man/man7 && echo $(PREFIX)/share/man || echo $(PREFIX)/man)
+MANDIR = $(shell test -d /usr/share/man/man7)
 LIBS   = -lc 
 CXXFLAGS = -std=c++11
 
@@ -27,7 +27,7 @@ love.7.gz:
 
 install: love love.7.gz
 	install -m 0755 -s love $(PREFIX)/bin
-	install -m 0644 doc/love.7.gz $(MANDIR)/
+	install -m 0644 doc/love.7.gz $(MANDIR)
 
 uninstall:
 	-@rm $(PREFIX)/bin/love
