@@ -6,7 +6,7 @@ MANDIR = /usr/share/man/man7
 LIBS   = -lc 
 CXXFLAGS = -std=c++11
 
-all: love love.7.gz
+all: love 
 
 love: love.cpp
 	$(CXX) $(CXXFLAGS) love.cpp -o love $(LDFLAGS) $(LIBS)
