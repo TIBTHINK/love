@@ -30,3 +30,6 @@ i was bored
 https://www.youtube.com/watch?v=kGOQfLFzJj8
 
 give this dude love or i eat your knees
+
+## sample video
+[![asciicast](https://asciinema.org/a/309461.svg)](https://asciinema.org/a/309461)
