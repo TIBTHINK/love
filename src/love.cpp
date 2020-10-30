@@ -1,5 +1,8 @@
+// Version 2.5
+// Writen by Tibthink: https://github.com/TIBTHINK
+// Under GNU LICSENCE, Basicly if used please credit me 
+
 // add some librays my guy
-#include "CLI11.hpp"
 #include <iostream>
 #include <string>
 #include <thread>
@@ -81,28 +84,8 @@ int text(void)
 int main(int argc, char **argv) {
 	using std::cout;
     using std::endl;
-	CLI::App app{"a simple program to run in Linux when you don't feel loved"};
-	
-	/// [define]
-	bool flag_bool;
-	app.add_flag("-v, --version", flag_bool, "gives the version of love");
 
-	/// [define]
-	
-	/// [parser]
-	try {
-	    app.parse(argc, argv);
-	} catch (const CLI::ParseError &e) {
-	    return app.exit(e);
-	}
-	/// [parser]
-	
-	/// [usage]
-	if(flag_bool)
-		cout << "V2.3" << endl;
-  else(void)
     text();
-	/// [usage]
 }
 
 
