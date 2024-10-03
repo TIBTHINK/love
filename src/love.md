@@ -1,5 +1,5 @@
 ## NAME
-    love - motivanal lizard in terminal
+    love - motivational lizard in terminal
 ## DESCRIPTION
     A simple program that tells you are loved
 
